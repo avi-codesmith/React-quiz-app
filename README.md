@@ -1,3 +1,3 @@
 # work in progressing...
 # [Visit now](https://react-js-quiz-app.netlify.app/)
-<img width="600" alt="download" src="https://github.com/user-attachments/assets/3109405b-7dde-4c94-95b9-9f0a041fb2d7" />
+<img width="900" alt="download" src="https://github.com/user-attachments/assets/3109405b-7dde-4c94-95b9-9f0a041fb2d7" />
