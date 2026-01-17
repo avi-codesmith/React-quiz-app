@@ -205,18 +205,18 @@ header img {
 }
 
 .answer button.selected {
-  background: rgba(255, 255, 255, 0.55);
+  background: #ffa600a2;
   color: rgba(20, 20, 20, 0.9);
 }
 
 .answer button.correct {
-  background: rgba(255, 255, 255, 0.7);
+  background: #008000a2;
   color: rgba(10, 10, 10, 0.95);
 }
 
 .answer button.wrong {
-  background: rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.4);
+  background: #ff0000a2;
+  color: #222;
 }
 
 #skip-action {
