@@ -1,5 +1,6 @@
 import QuestionTimer from "./QuestionTimer.jsx";
 import Answers from "./Answers.jsx";
+import { use, useState } from "react";
 
 export default function ({
   currIndex,
@@ -8,6 +9,18 @@ export default function ({
   answerState,
   handleSkipAnswer,
 }) {
+  const [answer, setAnswer] = useState({
+    selectedAnswer: "",
+    isCorrect: null,
+  });
+
+  function handleSelectAnswer(answer) {
+    setAnswer({
+      selectedAnswer: answer,
+      isCorrect,
+    });
+  }
+
   return (
     <div id="question">
       <QuestionTimer onTimeUp={handleSkipAnswer} timeout={10000} />
@@ -16,7 +29,7 @@ export default function ({
         answers={currIndex.answers}
         selectedAnswers={selectedAnswers}
         answerState={answerState}
-        onSelect={onSelectAnswer}
+        onSelect={handleSelectAnswer}
       />
     </div>
   );
