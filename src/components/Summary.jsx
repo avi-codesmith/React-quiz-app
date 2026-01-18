@@ -20,27 +20,30 @@ export default function Summary({ userAnswers }) {
       <img src={logo} alt="Trophy icon" />
       <h2 className="heading">Quiz completed!</h2>
       <div id="summary-status">
-        <p className="status-w">
+        <div className="status-w">
           <p className="number">{skipped.toFixed(1)}%</p>
           <p className="text">
             Skipped Answers
-            <p className="dull">"{skippedCount}"</p>
+            <br />
+            <span className="dull">"{skippedCount}"</span>
           </p>
-        </p>
-        <p className="status-w">
+        </div>
+        <div className="status-w">
           <p className="number">{correct.toFixed(1)}%</p>
           <p className="text">
             Correct Answers
-            <p className="dull">"{correctCount}"</p>
+            <br />
+            <span className="dull">"{correctCount}"</span>
           </p>
-        </p>
-        <p className="status-w">
+        </div>
+        <div className="status-w">
           <p className="number">{wrong.toFixed(1)}%</p>
           <p className="text">
             Wrong Answers
-            <p className="dull">"{wrongCount}"</p>
+            <br />
+            <span className="dull">"{wrongCount}"</span>
           </p>
-        </p>
+        </div>
       </div>
       <ol>
         {userAnswers.map((answer, index) => {
