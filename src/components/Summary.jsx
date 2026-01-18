@@ -21,7 +21,7 @@ export default function Summary({ userAnswers }) {
       <h2 className="heading">Quiz completed!</h2>
       <div id="summary-status">
         <div className="status-w">
-          <p className="number">{skipped.toFixed(1)}%</p>
+          <p className="number">{skipped.toFixed(0)}%</p>
           <p className="text">
             Skipped Answers
             <br />
@@ -29,7 +29,7 @@ export default function Summary({ userAnswers }) {
           </p>
         </div>
         <div className="status-w">
-          <p className="number">{correct.toFixed(1)}%</p>
+          <p className="number">{correct.toFixed(0)}%</p>
           <p className="text">
             Correct Answers
             <br />
@@ -37,7 +37,7 @@ export default function Summary({ userAnswers }) {
           </p>
         </div>
         <div className="status-w">
-          <p className="number">{wrong.toFixed(1)}%</p>
+          <p className="number">{wrong.toFixed(0)}%</p>
           <p className="text">
             Wrong Answers
             <br />
