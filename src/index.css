@@ -219,6 +219,12 @@ header img {
   color: #222;
 }
 
+.answer button:disabled {
+  cursor: url("../public/lock.png"), not-allowed !important;
+  opacity: 0.87;
+  transform: none;
+}
+
 #skip-action {
   margin-top: 2.5rem;
 }
@@ -230,6 +236,7 @@ header img {
   border: none;
   color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
+  background-color: red;
 }
 
 #skip-action button:hover {
