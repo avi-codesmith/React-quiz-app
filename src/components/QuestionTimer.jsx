@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 
-export default function QuestionTimer({ onTimeUp, timeout }) {
+export default function QuestionTimer({ onTimeUp, timeout, mode }) {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
     const timerFunc = setTimeout(() => {
-      onTimeUp();
+      if (onTimeUp !== null) {
+        onTimeUp();
+      }
     }, timeout);
 
     return () => {
@@ -18,12 +20,14 @@ export default function QuestionTimer({ onTimeUp, timeout }) {
       setTimer((prev) => {
         return prev + 10;
       });
-    }, 10);
+    }, 8);
 
     return () => {
       clearInterval(interval);
     };
   }, [timer]);
 
-  return <progress id="question-time" value={timer} max={timeout} />;
+  return (
+    <progress id="question-time" value={timer} max={timeout} className={mode} />
+  );
 }

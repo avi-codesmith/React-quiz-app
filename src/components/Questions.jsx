@@ -3,17 +3,30 @@ import Answers from "./Answers.jsx";
 import QUESTIONS from "../Questions.js";
 import { useState } from "react";
 
-export default function ({ currIndex, handleSkipAnswer, onSelectAnswer }) {
+export default function Questions({
+  currIndex,
+  handleSkipAnswer,
+  onSelectAnswer,
+}) {
   const [answer, setAnswer] = useState({
     selectedAnswer: "",
     isCorrect: null,
   });
+  let timer = 2000;
 
   function handleSelectAnswer(answer) {
     setAnswer({
       selectedAnswer: answer,
       isCorrect: null,
     });
+
+    if (answer.selectedAnswer) {
+      timer = 1000;
+    }
+
+    if (answer.isCorrect !== null) {
+      timer = 2000;
+    }
 
     setTimeout(() => {
       setAnswer({
@@ -36,7 +49,12 @@ export default function ({ currIndex, handleSkipAnswer, onSelectAnswer }) {
 
   return (
     <div id="question">
-      <QuestionTimer onTimeUp={handleSkipAnswer} timeout={10000} />
+      <QuestionTimer
+        onTimeUp={answer.selectedAnswer === "" ? handleSkipAnswer : null}
+        timeout={timer}
+        mode={answerState}
+        key={timer}
+      />
       <h2>{QUESTIONS[currIndex].text}</h2>
       <Answers
         answers={QUESTIONS[currIndex].answers}
