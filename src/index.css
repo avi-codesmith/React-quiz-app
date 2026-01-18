@@ -17,13 +17,15 @@ html {
 }
 
 body {
+  -webkit-backdrop-filter: blur(12px) brightness(0.5);
+  backdrop-filter: blur(1px) brightness(0.5);
+  background-attachment: fixed;
+  background-image: linear-gradient(#e781fb92, #8e76fa92),
+    url("../public/bg.jpg");
+  background-position: 50%;
+  background-size: cover;
   margin: 0;
-  height: 100%;
   padding: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("../public/bg.jpg") center / cover no-repeat fixed;
-  color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
 }
 
 header {
@@ -82,7 +84,7 @@ header h1 {
   margin: auto;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.413);
-  backdrop-filter: blur(22px) saturate(160%);
+  backdrop-filter: blur(300px) saturate(300%);
   -webkit-backdrop-filter: blur(22px) saturate(160%);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
