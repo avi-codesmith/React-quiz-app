@@ -18,12 +18,12 @@ html {
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
   padding: 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url("../public/bg.jpg") center / cover no-repeat fixed;
   color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
 }
 
 header {
@@ -81,7 +81,7 @@ header h1 {
   max-width: 50rem;
   margin: auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.413);
   backdrop-filter: blur(22px) saturate(160%);
   -webkit-backdrop-filter: blur(22px) saturate(160%);
   border-radius: 20px;
@@ -125,6 +125,30 @@ header h1 {
   background: #6a558a;
 }
 
+#question progress.correct {
+  background-color: rgba(140, 255, 200, 0.764);
+}
+
+#question progress.correct::-webkit-progress-value {
+  background-color: rgba(140, 255, 200, 0.764);
+}
+
+#question progress.correct::-webkit-progress-bar {
+  background: #ffffff00;
+}
+
+#question progress.wrong {
+  background-color: rgba(255, 140, 170, 0.764);
+}
+
+#question progress.wrong::-webkit-progress-value {
+  background-color: rgba(255, 140, 170, 0.764);
+}
+
+#question progress.wrong::-webkit-progress-bar {
+  background: #ffffff00;
+}
+
 #question h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
@@ -156,9 +180,9 @@ header h1 {
   padding: 1rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.18);
+  background: #3232321a;
   color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(14px);
   cursor: pointer;
   transition: all 0.25s ease;
@@ -211,8 +235,9 @@ header h1 {
   max-width: 40rem;
   margin: 2rem auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(24px) saturate(160%);
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(300px) saturate(300%);
+  -webkit-backdrop-filter: blur(300px) saturate(300%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
   color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
@@ -227,10 +252,83 @@ header h1 {
 
 #summary h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   margin: 0;
   text-transform: uppercase;
+}
+
+#summary-status {
+  display: flex;
+  background-color: #ffffff50;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  gap: 2rem;
+  border: 1px solid #fff;
+  width: 30rem;
+}
+
+#summary-status .status-w {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 2rem;
+}
+
+.status-w:nth-child(2) {
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  padding: 0 2rem;
+}
+
+.status-w p {
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+}
+
+.status-w p .dull {
+  color: #ffffffac;
+  font-size: 1rem;
+}
+
+.status-w .number {
+  font-size: 2rem;
+}
+
+#summary ol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#summary ol li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+#summary ol li:last-child {
+  border: none;
+}
+
+#summary ol h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff74;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 50%;
 }
 
 #summary img {
@@ -244,10 +342,6 @@ header h1 {
   margin: 2rem auto;
   padding: 0;
   text-align: center;
-}
-
-#summary li {
-  margin: 2rem 0;
 }
 
 #summary .question {
@@ -266,11 +360,11 @@ header h1 {
 }
 
 #summary .user-answer.wrong {
-  color: #ff9fc6;
+  color: rgb(255, 46, 81);
 }
 
 #summary .user-answer.skipped {
-  color: rgba(255, 255, 255, 0.6);
+  color: #333;
   font-weight: normal;
 }
 

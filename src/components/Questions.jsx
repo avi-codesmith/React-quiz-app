@@ -12,7 +12,7 @@ export default function Questions({
     selectedAnswer: "",
     isCorrect: null,
   });
-  let timer = 2000;
+  let timer = 3000;
 
   function handleSelectAnswer(answer) {
     setAnswer({
@@ -21,11 +21,11 @@ export default function Questions({
     });
 
     if (answer.selectedAnswer) {
-      timer = 1000;
+      timer = 2000;
     }
 
     if (answer.isCorrect !== null) {
-      timer = 2000;
+      timer = 3000;
     }
 
     setTimeout(() => {
@@ -35,8 +35,8 @@ export default function Questions({
       });
       setTimeout(() => {
         onSelectAnswer(answer);
-      }, 2000);
-    }, 1000);
+      }, 3000);
+    }, 2000);
   }
 
   let answerState = "";
