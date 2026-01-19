@@ -1,3 +1,19 @@
-# work in progressing...
-# [Visit now](https://react-js-quiz-app.netlify.app/)
-<img width="900" alt="download" src="https://github.com/user-attachments/assets/3109405b-7dde-4c94-95b9-9f0a041fb2d7" />
+# React Quiz App
+
+## A simple quiz application built with React.  
+## Users can answer multiple-choice questions and see their results at the end.
+
+---
+
+## Live Demo
+👉 https://react-js-quiz-app.netlify.app/
+
+---
+
+## Preview
+
+https://github.com/user-attachments/assets/39ca6234-4e95-4710-8f78-b18d6de3adc0
+
+---
+
+More improvements and features will be added soon.
