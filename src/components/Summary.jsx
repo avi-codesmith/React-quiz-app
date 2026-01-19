@@ -11,8 +11,9 @@ export default function Summary({ userAnswers }) {
   const correct = (correctCount / 7) * 100;
 
   const wrongCount = userAnswers.filter(
-    (answer, index) => QUESTIONS[index].answers[0] !== answer
+    (answer, index) => answer !== null && QUESTIONS[index].answers[0] !== answer
   ).length;
+
   const wrong = (wrongCount / 7) * 100;
 
   return (
