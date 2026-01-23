@@ -3,7 +3,7 @@ import Answers from "./Answers.jsx";
 import QUESTIONS from "../Questions.js";
 import { useState } from "react";
 
-const Questions = function Questions({
+export default function Questions({
   currIndex,
   handleSkipAnswer,
   onSelectAnswer,
@@ -64,6 +64,4 @@ const Questions = function Questions({
       />
     </div>
   );
-};
-
-export default Questions;
+}
